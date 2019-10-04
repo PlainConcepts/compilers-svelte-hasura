@@ -1,0 +1,300 @@
+/* fonts */
+
+/* overpass-100normal - latin */
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 100;
+	src:
+		local('Overpass Thin '),
+		local('Overpass-Thin'),
+		url('fonts/overpass/overpass-latin-100.woff2') format('woff2');
+}
+
+/* overpass-300normal - latin */
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		local('Overpass Light '),
+		local('Overpass-Light'),
+		url('fonts/overpass/overpass-latin-300.woff2') format('woff2');
+}
+
+/* overpass-400normal - latin */
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Overpass Light '),
+		local('Overpass-Light'),
+		url('fonts/overpass/overpass-latin-400.woff2') format('woff2');
+}
+
+/* overpass-700normal - latin */
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local('Overpass Bold '),
+		local('Overpass-Bold'),
+		url('fonts/overpass/overpass-latin-700.woff2') format('woff2');
+}
+
+/* fira-mono-400normal - latin */
+@font-face {
+	font-family: 'Fira Mono';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Fira Mono Regular '),
+		local('Fira Mono-Regular'),
+		url('fonts/fira-mono/fira-mono-latin-400.woff2') format('woff2');
+}
+
+/* roboto-400normal - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src:
+		local('Roboto Regular '),
+		local('Roboto-Regular'),
+		url('fonts/roboto/roboto-latin-400.woff2') format('woff2');
+}
+
+/* roboto-400italic - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 400;
+	src:
+		local('Roboto Regular italic'),
+		local('Roboto-Regularitalic'),
+		url('fonts/roboto/roboto-latin-400italic.woff2') format('woff2');
+}
+
+/* roboto-500normal - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 500;
+	src:
+		local('Roboto Medium '),
+		local('Roboto-Medium'),
+		url('fonts/roboto/roboto-latin-500.woff2') format('woff2');
+}
+
+/* roboto-500italic - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 500;
+	src:
+		local('Roboto Medium italic'),
+		local('Roboto-Mediumitalic'),
+		url('fonts/roboto/roboto-latin-500italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Marvin Visions';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src:
+		url('fonts/marvin-visions/marvin-visions.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Mexcellent';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src:
+		url('fonts/mexcellent/mexcellent.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Hauser';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src:
+		url('fonts/hauser/hauser.woff') format('woff2');
+}
+
+html {
+	--font: 'Overpass', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--font-system: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	--prime:      #ff3e00;
+	--second:     #676778;
+	--flash:       #40b3ff;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 0.5vw;
+	box-sizing: border-box;
+	/* font-family: var(--font-system); */
+	font-family: var(--font);
+	font-weight: 300;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: 1vw;
+	padding: 0.4vw;
+	margin: 0 0 0.5vw 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 0.3vw;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+input[type="range"] {
+	height: 0;
+}
+
+button {
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font);
+	margin: 0 0 1em 0;
+	line-height: 1.2;
+}
+
+h2 {
+	margin: 0 0 0.5em 0;
+	font-size: 4vw;
+	font-weight: 300;
+	/* text-align: center; */
+}
+
+h3 {
+	font-size: 2.8vw;
+	text-transform: uppercase;
+}
+
+ul {
+	margin: 0;
+	font-size: 1.4vw;
+	line-height: 1.2;
+}
+
+p {
+	line-height: 1.2;
+}
+
+pre {
+	margin: 0;
+	background-color: white;
+	border-radius: 0.3vw;
+	padding: 1vw;
+	font-family: var(--font-mono);
+	color: #333;
+	tab-size: 2;
+	-moz-tab-size: 2;
+	overflow-x: scroll;
+	line-height: 1.4;
+}
+
+.side-by-side {
+	height: 0;
+	flex: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2vw;
+}
+
+.padded-image {
+	padding: 1vw;
+	background: white;
+	border-radius: 0.3vw;
+}
+
+.border-radius {
+	border-radius: 0.3vw;
+}
+
+.text-shadow {
+	text-shadow: rgba(0, 0, 0, 0.5) 0.4vw 0.8vw 3vw;
+}
+
+.drop-shadow {
+	box-shadow: rgba(0, 0, 0, 0.5) 0.4vw 0.8vw 3vw;
+}
+
+.light-grey {
+	background-color: #fdfdfd;
+}
+
+.photo-credit-light, .photo-credit-dark {
+	position: absolute;
+	left: 1vw;
+	bottom: 1vw;
+	margin: 0;
+	font-size: 1vw;
+	z-index: 999;
+}
+
+.photo-credit-light {
+	color: rgba(255,255,255,0.6);
+}
+
+.photo-credit-light.photo-credit-background {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.photo-credit-dark {
+	color: rgba(0,0,0,0.6);
+}
+
+.photo-credit-dark.photo-credit-background {
+	background-color: rgba(255,255,255,0.8);
+}
