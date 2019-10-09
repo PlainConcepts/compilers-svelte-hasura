@@ -41,6 +41,14 @@ const images = {
   svelteLogoDisabled: require('./assets/svelte-disabled.png'),
   introducingSvelte: require('./assets/introducing-svelte.png'),
   somethingChangedReact: require('./assets/something-changed-react.png'),
+  importingComponents: require('./assets/importing-components.png'),
+  thinking: require('./assets/thinking.png'),
+  howObservableRuns: require('./assets/how-observable-runs.png'),
+  introducingReactivity: require('./assets/introducing-reactivity.png'),
+  smile: require('./assets/smile.png'),
+  doubleSmile: require('./assets/double-smile.png'),
+  performance1: require('./assets/performance1.png'),
+  performance2: require('./assets/performance2.png'),
   plainBackgroundDark: require('./assets/plain-background-dark.png'),
   offices: require('./assets/offices.png')
 };
@@ -174,6 +182,162 @@ export default class Presentation extends React.Component {
             className="external-content"
             src="https://svelte.dev/repl/c5c0f9abe8354a1a9eb398e6ff914040?version=3.12.1"
           />
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Importing components...
+          </Heading>
+          <Image src={images.importingComponents} />
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Reactive?
+          </Heading>
+          <Image src={images.thinking} />
+        </Slide>
+
+        <Slide className="external-content-container" >
+          <iframe
+            title="svelte-repl"
+            className="external-content"
+            src="https://codesandbox.io/s/dotnetmalagareact-not-reactive-qpwvu"
+          />
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Text><a href="https://observablehq.com/@observablehq/how-observable-runs">@mbostock</a></Text>
+          <Text textSize="medium" textAlign="justify">
+            <p>If you’ve used other interactive notebooks before, you’re probably accustomed to code running from top to bottom. The first cell runs first, the second cell runs second and can reference values defined in the first cell, and so on down the page.</p>
+          </Text>
+          <Text textSize="medium" textAlign="justify">
+            <p>Observable is different: <mark>it functions like a spreadsheet</mark>, where cells (like formulas) <mark>run automatically</mark> whenever their referenced values change. Observable runs cells independently of their order in the notebook, giving you the flexibility to arrange your cells in whatever order you prefer for literate programming.</p>
+          </Text>
+          <Text textSize="medium" textAlign="justify">
+            <p>Observable uses <mark>topological order</mark> to run cells, as determined by cell references. If cell B needs the value of cell A, Observable won’t run cell B until A is computed. Likewise whenever the value of cell A changes, cell B is automatically recomputed. Rather than a linear sequence of cells, an Observable notebook is a <mark>directed graph</mark> where values flow from top to bottom.</p>
+          </Text>
+          <Image src={images.howObservableRuns} margin="2% 10%" />
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Introducing reactivity...
+          </Heading>
+          <Image src={images.introducingReactivity} />
+          <Text margin="3%">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label">
+              https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label
+            </a>
+          </Text>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Reactive
+          </Heading>
+          <Image src={images.smile} />
+        </Slide>
+
+        <Slide className="external-content-container" >
+          <iframe
+            title="svelte-repl"
+            className="external-content"
+            src="https://svelte.dev/repl/96bfb2fce133460f8eb16cb737def0f4?version=3.12.1"
+          />
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Reactive<sup>2</sup>
+          </Heading>
+          <Image src={images.doubleSmile} />
+        </Slide>
+
+        <Slide className="external-content-container" >
+          <iframe
+            title="svelte-repl"
+            className="external-content"
+            src="https://svelte.dev/repl/cb9a18ab1a0c45709d33e607da443de0?version=3.12.1"
+          />
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            And about performance...
+          </Heading>
+          <Image src={images.performance1} margin="10% 18% 8%" />
+          <Text >
+            <a href="https://hacks.mozilla.org/2019/03/fast-bump-allocated-virtual-doms-with-rust-and-wasm/">
+              https://hacks.mozilla.org/2019/03/fast-bump-allocated-virtual-doms-with-rust-and-wasm/
+            </a>
+          </Text>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            And about performance...
+          </Heading>
+          <Image src={images.performance2} margin="3% 30%" />
+          <Text >
+            <a href="https://twitter.com/kentcdodds/status/1177653640862912512">
+              @kentcdodds
+            </a>
+          </Text>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Beyond Svelte...
+          </Heading>
+          <Text margin="5% 0 0">
+            <a href="https://sapper.svelte.dev/">Sapper</a>
+          </Text>
+          <List>
+            <ListItem textColor="tertiary">Next/Gatsby-style framework...</ListItem>
+            <ListItem textColor="tertiary">...except with much less JavaScript</ListItem>
+            <ListItem textColor="tertiary">Automatic SSR & Code-Splitting</ListItem>
+          </List>
+          <Text margin="5% 0 0">
+            <a href="https://svelte-native.technology/">Svelte Native</a>
+          </Text>
+          <List>
+            <ListItem textColor="tertiary">Community-driven project</ListItem>
+            <ListItem textColor="tertiary">Based on nativescript-vue</ListItem>
+          </List>
+          <Text margin="5% 0 0">
+            <a href="https://github.com/Rich-Harris/svelte-gl">Svelte GL</a>
+          </Text>
+          <List>
+            <ListItem textColor="tertiary">Like Three.js, but svelter</ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Give a try...
+          </Heading>
+          <Image src={images.svelteLogo} margin="5% 0 0 30%" />
+          <Text margin="3%">
+            <a href="https://svelte.dev/">
+              https://svelte.dev/
+            </a>
+          </Text>
+          <Text margin="3%">
+            <a href="https://twitter.com/Rich_Harris">
+              @Rich_Harris
+            </a>
+          </Text>
         </Slide>
 
         <Slide bgImage={images.plainBackgroundDark} bgRepeat="no-repeat" bgSize="60%" bgPosition="0%" bgColor="quaternary" padding="0 0 0 30%">
