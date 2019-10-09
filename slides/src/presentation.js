@@ -47,8 +47,7 @@ const images = {
   introducingReactivity: require('./assets/introducing-reactivity.png'),
   smile: require('./assets/smile.png'),
   doubleSmile: require('./assets/double-smile.png'),
-  performance1: require('./assets/performance1.png'),
-  performance2: require('./assets/performance2.png'),
+  performance: require('./assets/performance.png'),
   plainBackgroundDark: require('./assets/plain-background-dark.png'),
   offices: require('./assets/offices.png')
 };
@@ -273,25 +272,20 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="tertiary">
             And about performance...
           </Heading>
-          <Image src={images.performance1} margin="10% 18% 8%" />
-          <Text >
-            <a href="https://hacks.mozilla.org/2019/03/fast-bump-allocated-virtual-doms-with-rust-and-wasm/">
-              https://hacks.mozilla.org/2019/03/fast-bump-allocated-virtual-doms-with-rust-and-wasm/
-            </a>
-          </Text>
-        </Slide>
-
-        <Slide bgColor="primary">
-          <Header logoSrc={images.plainLogo} />
-          <Heading size={3} textColor="tertiary">
-            And about performance...
-          </Heading>
-          <Image src={images.performance2} margin="3% 30%" />
+          <Image src={images.performance} margin="3% 30%" />
           <Text >
             <a href="https://twitter.com/kentcdodds/status/1177653640862912512">
               @kentcdodds
             </a>
           </Text>
+        </Slide>
+
+        <Slide className="external-content-container" >
+          <iframe
+            title="svelte-repl"
+            className="external-content"
+            src="https://rethinking-reactivity.surge.sh/time-slicing/"
+          />
         </Slide>
 
         <Slide bgColor="primary">
