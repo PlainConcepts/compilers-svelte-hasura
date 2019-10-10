@@ -12,7 +12,7 @@ import {
 
 import createTheme from 'spectacle/lib/themes/default';
 
-import { GraceHopperSlide, Header, RethinkingReactivity } from './components';
+import { GraceHopperSlide, Header, RethinkingReactivity, LanparSlide } from './components';
 
 import './index.css';
 
@@ -35,6 +35,8 @@ const theme = createTheme(
 const images = {
   plainLogo: require('./assets/plain-logo.png'),
   plainLogoDark: require('./assets/plain-logo-dark.png'),
+  usPatent: require('./assets/us-patent.png'),
+  lanpar: require('./assets/lanpar.png'),
   tomDale: require('./assets/tom-dale.png'),
   sveltesse: require('./assets/sveltesse.png'),
   svelteLogo: require('./assets/svelte.png'),
@@ -48,6 +50,7 @@ const images = {
   smile: require('./assets/smile.png'),
   doubleSmile: require('./assets/double-smile.png'),
   performance: require('./assets/performance.png'),
+  githubLogo: require('./assets/github-logo.png'),
   plainBackgroundDark: require('./assets/plain-background-dark.png'),
   offices: require('./assets/offices.png')
 };
@@ -73,10 +76,50 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="primary">
           <Header logoSrc={images.plainLogo} />
-          <Heading size={3} textColor="tertiary">
-            TODO: Who we are and 4 more slides
+          <Heading size={3} textColor="secondary">
+            Hi!
+          </Heading>
+          <Heading size={4} textColor="tertiary">
+            We are Marco & Iván
+          </Heading>
+          <Heading size={4} textColor="secondary">
+            Frontend Chapter Leads at Plain Concepts
           </Heading>
         </Slide>
+
+        <Slide>
+          <Header logoSrc={images.plainLogo} />
+          <Image src={images.usPatent} width="50%"/>
+        </Slide>
+
+        <Slide>
+          <Header logoSrc={images.plainLogo} />
+          <Image src={images.lanpar} width="50%" />
+        </Slide>
+
+        <LanparSlide>
+          <Heading size={4} textColor="tertiary">
+            LANPAR — LANguage for Programming Arrays at Random
+          </Heading>
+          <Heading size={5} textColor="quaternary">
+            Rene K. Pardo and Remy Landau
+          </Heading>
+          <Heading size={5} textColor="secondary">
+            U.S. Patent 4,398,249
+          </Heading>
+          <Heading size={5} textColor="quaternary">
+            1970
+          </Heading>
+        </LanparSlide>
+
+        <LanparSlide>
+          <Heading size={4} textColor="tertiary" margin="20% 0">
+            “forward referencing”
+          </Heading>
+          <Heading size={4} textColor="tertiary" margin="-15% 0">
+            AKA reactive programing
+          </Heading>
+        </LanparSlide>
 
         <Slide className="external-content-container">
           <Heading className="heading-top" size={3} textColor="primary">
@@ -331,6 +374,20 @@ export default class Presentation extends React.Component {
             <a href="https://twitter.com/Rich_Harris">
               @Rich_Harris
             </a>
+          </Text>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <Header logoSrc={images.plainLogo} />
+          <Heading size={3} textColor="tertiary">
+            Show me the code...
+          </Heading>
+          <Heading size={3} textColor="secondary">
+            ...and the slides
+          </Heading>
+          <Image src={images.githubLogo} width="10%" />
+          <Text>
+            <a href="https://github.com/PlainConcepts/compilers-svelte-hasura">https://github.com/PlainConcepts/compilers-svelte-hasura</a>
           </Text>
         </Slide>
 
