@@ -22,3 +22,11 @@
 .text-remark {
   color: #00d0ff;
 }
+
+button[aria-label="Next slide"] svg {
+  fill: rgb(0, 208, 255) !important;
+}
+
+button[aria-label="Previous slide"] svg {
+  fill: rgb(0, 208, 255) !important;
+}
